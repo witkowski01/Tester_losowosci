@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tester_losowości.Model;
 
 namespace Tester_losowości
 {
@@ -23,6 +24,23 @@ namespace Tester_losowości
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private string wej_string;
+
+        private void Test_run(object sender, RoutedEventArgs e)
+        {
+            wej_string = System.IO.File.ReadAllText(wej.Text);
+            Test test=new Test(wej_string);
+
+            DlugiejSeriiTextBox.Text= test.TestDlugiejSerii().ToString();
+            ProgresBar.Value = 25;
+            ParBitowTextBox.Text=test.TestParBitow().ToString();
+            ProgresBar.Value = 50;
+            PojedynczychBitowTextBox.Text=test.TestPojedynczychBitow().ToString();
+            ProgresBar.Value = 75;
+            AutokorelacjiTextBox.Text=test.Test_Autokorelacji().ToString();
+            ProgresBar.Value = 100;
         }
     }
 }

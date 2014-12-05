@@ -96,9 +96,10 @@ namespace Tester_losowości.Model
         {
             liczbaJedynek_Zer();
             liczbaPar();
-            return ((4/(sample.Length/-1))*
-                    ((Math.Pow(n00, 2)) + (Math.Pow(n01, 2)) + (Math.Pow(n10, 2)) + (Math.Pow(n11, 2))) -
-                    (2/sample.Length)*((Math.Pow(n0, 2)) + (Math.Pow(n1, 2))) + 1);
+            double wynik=(((4*
+                   ((Math.Pow(n00, 2)) + (Math.Pow(n01, 2)) + (Math.Pow(n10, 2)) + (Math.Pow(n11, 2)))) / (sample.Length - 1)) -
+                    ((2 * ((Math.Pow(n0, 2)) + (Math.Pow(n1, 2)))) / sample.Length) + 1);
+            return wynik;
         }
         #endregion
 
@@ -107,22 +108,6 @@ namespace Tester_losowości.Model
         #region Testy statystyczne według FIPS 140-2
         
         #region Test długiej serii
-
-        public bool TestDlugiejSerii()
-        {
-            bool wyjscie = true;
-            List<bool> lista = new List<bool>();
-            for (int i = 0; i < sample.Length - 26; i++)
-            {
-                if (sprawdz_serie(i))
-                {
-                    wyjscie = false;
-                    break;
-                }
-                lista.Add(sprawdz_serie(i));
-            }
-            return wyjscie;  // jeśli wyjście większe od 0 to test zakończył się porażką
-        }
 
         public bool sprawdz_serie(int iterator)
         {
@@ -149,6 +134,22 @@ namespace Tester_losowości.Model
             }
             return wyjscie;
         }
+        public bool TestDlugiejSerii()
+        {
+            bool wyjscie = true;
+            List<bool> lista = new List<bool>();
+            for (int i = 0; i < sample.Length - 26; i++)
+            {
+                if (sprawdz_serie(i))
+                {
+                    wyjscie = false;
+                    break;
+                }
+                lista.Add(sprawdz_serie(i));
+            }
+            return wyjscie;  // jeśli wyjście większe od 0 to test zakończył się porażką
+        }
+        
 
         #endregion
 

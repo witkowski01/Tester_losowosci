@@ -3,16 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="400" Width="525">
     <Grid>
+        <TextBox x:Name="wej" HorizontalAlignment="Left" Height="26" Margin="235,90,0,0" TextWrapping="Wrap" Text="wejscie.txt" VerticalAlignment="Top" Width="213"/>
         <TextBlock x:Name="Tester_losowości" HorizontalAlignment="Left" Margin="71,27,0,0" TextWrapping="Wrap" Text="Tester_Losowości" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="69,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="71,242,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="69,165,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="71,302,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="69,72,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="71,221,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="69,144,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="71,279,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <ProgressBar x:Name="ProgresBar" HorizontalAlignment="Left" Height="16" Margin="69,343,0,0" VerticalAlignment="Top" Width="324"/>
+        <TextBox x:Name="DlugiejSeriiTextBox" HorizontalAlignment="Left" Height="23" Margin="69,93,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="AutokorelacjiTextBox" HorizontalAlignment="Left" Height="23" Margin="71,242,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PojedynczychBitowTextBox" HorizontalAlignment="Left" Height="23" Margin="69,165,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ParBitowTextBox" HorizontalAlignment="Left" Height="23" Margin="71,302,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="69,72,0,0" TextWrapping="Wrap" Text="Test długiej serii" VerticalAlignment="Top" Width="93"/>
+        <TextBlock HorizontalAlignment="Left" Margin="71,221,0,0" TextWrapping="Wrap" Text="Test autokorelacji" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="69,144,0,0" TextWrapping="Wrap" Text="Test pojedynczych bitów" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="71,279,0,0" TextWrapping="Wrap" Text="Test par bitów" VerticalAlignment="Top"/>
+        <ProgressBar x:Name="ProgresBar" HorizontalAlignment="Left" Height="16" Margin="103,343,0,0" VerticalAlignment="Top" Width="366"/>
+        <Button Content="Testuj" HorizontalAlignment="Left" Height="29" Margin="314,200,0,0" VerticalAlignment="Top" Width="109" Click="Test_run" Background="#FF22CF88" FontSize="16" FontWeight="Bold" FontFamily="Times New Roman"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,343,0,0" TextWrapping="Wrap" Text="Pasek postępu" VerticalAlignment="Top" Width="93"/>
 
     </Grid>
 </Window>
